@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies</title>
+    <script src="https://kit.fontawesome.com/4c63e30e23.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="MoviesCSS.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="Index.html"><img class="logo"
+                src="https://internship.suvenconsultants.com/projects/365webproject/365epimages/365ep.jpg"
+                alt="365"></a>
+        <ul>
+            <li><a href="Movies.html">Movies</a></li>
+            <li><a href="#">Tv Series</a></li>
+            <li><a href="#">Audio</a></li>
+        </ul>
+    </nav>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="https://internship.suvenconsultants.com/projects/365webproject/365mov/abc1.jpg"
+                style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="https://internship.suvenconsultants.com/projects/365webproject/365mov/abc2.jpg"
+                style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="https://internship.suvenconsultants.com/projects/365webproject/365mov/abc3.jpg"
+                style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="https://internship.suvenconsultants.com/projects/365webproject/365mov/abc4.jpg"
+                style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="	https://internship.suvenconsultants.com/projects/365webproject/365mov/abc5.jpg"
+                style="width:100%">
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <div class="dropdown_search">
+        <div class="dropdown" onmouseover="dropdown(this)" onmouseout="dropdownc(this)">
+            <button class="dropbtn"><span id="genreText">Genre</span><i class="fa fa-caret-down"></i></button>
+            <div class="dropdown-content" id="dropdown-content">
+                <a onclick="getMediaPosters(this.text)">All</a>
+                <a onclick="getmoviesaction(this.text)">Action</a>
+                <a onclick="getmoviesdrama(this.text)">Drama</a>
+                <a onclick="getmoviesscifi(this.text)">Sci-Fi</a>
+            </div>
+        </div>
+        <div class="search-container">
+            <form onsubmit="javascript:return false;">
+                <input type="text" id="input" class="input-medium search-query"
+                    placeholder="Search your favourite movie" name="search" oninput="updateResults()">
+            </form>
+        </div>
+    </div>
+    <div class="content" id="contents">
+
+        <!-- Category ===== Action -->
+
+        <div class="content_items" id="action_1" name="action"
+            style="background: url('https://internship.suvenconsultants.com/projects/365webproject/365mov/nano1.jpg'); background-size: cover;">
+            <div class="item_info">
+                <p class="name">Haider</p>
+                <p class="title">Indian crime tragedy film.</p>
+            </div>
+        </div>
+        <div class="content_items" id="action_2" name="action"
+            style="background: url('https://internship.suvenconsultants.com/projects/365webproject/365mov/nano2.jpg'); background-size: cover;">
+            <div class="item_info">
+                <p class="name">Dream 2</p>
+                <p class="title">Thriller, Mystery & Comedy </p>
+            </div>
+        </div>
+        <div class="content_items" id="action_3" name="action"
+            style="background: url('https://internship.suvenconsultants.com/projects/365webproject/365mov/nano3.jpg'); background-size: cover;">
+            <div class="item_info">
+                <p class="name">Batman</p>
+                <p class="title">A Marvel Comics superhero team.</p>
+            </div>
+        </div>
+        <div class="content_items" id="action_4" name="action"
+            style="background: url('https://internship.suvenconsultants.com/projects/365webproject/365mov/nano4.jpg'); background-size: cover;">
+            <div class="item_info">
+                <p class="name">Monster Manav</p>
+                <p class="title">Japanese manga series written by
+                    Tsugumi.</p>
+            </div>
+        </div>
+        <div class="content_items" id="action_5" name="action"
+            style="background: url('https://internship.suvenconsultants.com/projects/365webproject/365mov/nano5.jpg'); background-size: cover;">
+            <div class="item_info">
+                <p class="name">Kill Bill</p>
+                <p class="title">2003 American martial arts film.</p>
+            </div>
+        </div>
+        <div class="content_items" id="action_6" name="action"
+            style="background: url('https://internship.suvenconsultants.com/projects/365webproject/365mov/nano6.jpg'); background-size: cover;">
+            <div class="item_info">
+                <p class="name">Rowdy</p>
+                <p class="title">Indian action drama film.</p>
+            </div>
+        </div>
+
+
+        <!-- Category ===== Drama -->
+
+
+
+        <div class="content_items" id="drama_1" name="drama"
+            style="background: url('https://internship.suvenconsultants.com/projects/365webproject/365mov/nano7.jpg'); background-size: cover;">
+            <div class="item_info">
+                <p class="name">Agnipaath</p>
+                <p class="title">Indian crime tragedy film.</p>
+            </div>
+        </div>
+        <div class="content_items" id="drama_2" name="drama"
+            style="background: url('https://internship.suvenconsultants.com/projects/365webproject/365mov/nano8.jpg'); background-size: cover;">
+            <div class="item_info">
+                <p class="name">Ankhein</p>
+                <p class="title">Thriller, Mystery & Comedy .</p>
+            </div>
+        </div>
+        <div class="content_items" id="drama_3" name="drama"
+            style="background: url('https://internship.suvenconsultants.com/projects/365webproject/365mov/nano9.jpg'); background-size: cover;">
+            <div class="item_info">
+                <p class="name">Guide</p>
+                <p class="title">A Marvel Comics superhero team.</p>
+            </div>
+        </div>
+        <div class="content_items" id="drama_4" name="drama"
+            style="background: url('https://internship.suvenconsultants.com/projects/365webproject/365mov/nano10.jpg'); background-size: cover;">
+            <div class="item_info">
+                <p class="name">Deewar</p>
+                <p class="title">2016 ‧ Fantasy/Science Fiction.</p>
+            </div>
+        </div>
+        <div class="content_items" id="drama_5" name="drama"
+            style="background: url('https://internship.suvenconsultants.com/projects/365webproject/365mov/nano11.jpg'); background-size: cover;">
+            <div class="item_info">
+                <p class="name">Sholay</p>
+                <p class="title">A Marvel Comics superhero team.</p>
+            </div>
+        </div>
+        <div class="content_items" id="drama_6" name="drama"
+            style="background: url('https://internship.suvenconsultants.com/projects/365webproject/365mov/nano12.jpg'); background-size: cover;">
+            <div class="item_info">
+                <p class="name">K3G</p>
+                <p class="title">A Marvel Comics superhero team.</p>
+            </div>
+        </div>
+        <div class="content_items" id="drama_7" name="drama"
+            style="background: url('https://internship.suvenconsultants.com/projects/365webproject/365mov/nano13.jpg'); background-size: cover;">
+            <div class="item_info">
+                <p class="name">Shaurya</p>
+                <p class="title">A Marvel Comics superhero team.</p>
+            </div>
+        </div>
+        <div class="content_items" id="drama_8" name="drama"
+            style="background: url('https://internship.suvenconsultants.com/projects/365webproject/365mov/nano14.jpg'); background-size: cover;">
+            <div class="item_info">
+                <p class="name">Cheeni Kam</p>
+                <p class="title">A Marvel Comics superhero team.</p>
+            </div>
+        </div>
+        <div class="content_items" id="drama_9" name="drama"
+            style="background: url('https://internship.suvenconsultants.com/projects/365webproject/365mov/nano15.jpg'); background-size: cover;">
+            <div class="item_info">
+                <p class="name">Ishq Vishq</p>
+                <p class="title">A Marvel Comics superhero team.</p>
+            </div>
+        </div>
+        <div class="content_items" id="drama_10" name="drama"
+            style="background: url('https://internship.suvenconsultants.com/projects/365webproject/365mov/nano16.jpg'); background-size: cover;">
+            <div class="item_info">
+                <p class="name">Padmaavat</p>
+                <p class="title">A Marvel Comics superhero team.</p>
+            </div>
+        </div>
+        <div class="content_items" id="drama_11" name="drama"
+            style="background: url('https://internship.suvenconsultants.com/projects/365webproject/365mov/nano17.jpg'); background-size: cover;">
+            <div class="item_info">
+                <p class="name">Kai Po Che</p>
+                <p class="title">A Marvel Comics superhero team.</p>
+            </div>
+        </div>
+        <div class="content_items" id="drama_12" name="drama"
+            style="background: url('https://internship.suvenconsultants.com/projects/365webproject/365mov/nano18.jpg'); background-size: cover;">
+            <div class="item_info">
+                <p class="name">Raabta</p>
+                <p class="title">A Marvel Comics superhero team.</p>
+            </div>
+        </div>
+
+
+        <!-- Category ===== Sci-Fi -->
+
+
+        <div class="content_items" id="scifi_1" name="scifi"
+            style="background: url('https://internship.suvenconsultants.com/projects/365webproject/365mov/nano19.jpg'); background-size: cover;">
+            <div class="item_info">
+                <p class="name">Interstellar</p>
+                <p class="title">A Marvel Comics superhero team.</p>
+            </div>
+        </div>
+        <div class="content_items" id="scifi_2" name="scifi"
+            style="background: url('https://internship.suvenconsultants.com/projects/365webproject/365mov/nano20.jpg'); background-size: cover;">
+            <div class="item_info">
+                <p class="name">Star Wars</p>
+                <p class="title">A Marvel Comics superhero team.</p>
+            </div>
+        </div>
+        <div class="content_items" id="scifi_3" name="scifi"
+            style="background: url('https://internship.suvenconsultants.com/projects/365webproject/365mov/nano21.jpg'); background-size: cover;">
+            <div class="item_info">
+                <p class="name">Thor</p>
+                <p class="title">A Marvel Comics superhero team.</p>
+            </div>
+        </div>
+        <div class="content_items" id="scifi_4" name="scifi"
+            style="background: url('https://internship.suvenconsultants.com/projects/365webproject/365mov/nano22.jpg'); background-size: cover;">
+            <div class="item_info">
+                <p class="name">Captain America</p>
+                <p class="title">A Marvel Comics superhero team.</p>
+            </div>
+        </div>
+        <div class="content_items" id="scifi_5" name="scifi"
+            style="background: url('https://internship.suvenconsultants.com/projects/365webproject/365mov/nano23.jpg'); background-size: cover;">
+            <div class="item_info">
+                <p class="name">X-Men</p>
+                <p class="title">A Marvel Comics superhero team.</p>
+            </div>
+        </div>
+        <div class="content_items" id="scifi_6" name="scifi"
+            style="background: url('https://internship.suvenconsultants.com/projects/365webproject/365mov/nano24.jpg'); background-size: cover;">
+            <div class="item_info">
+                <p class="name">Black Widow</p>
+                <p class="title">A Marvel Comics superhero team.</p>
+            </div>
+        </div>
+        <div class="content_items" id="scifi_7" name="scifi"
+            style="background: url('https://internship.suvenconsultants.com/projects/365webproject/365mov/nano25.jpg'); background-size: cover;">
+            <div class="item_info">
+                <p class="name">Iron-Man</p>
+                <p class="title">A Marvel Comics superhero team.</p>
+            </div>
+        </div>
+        <div class="content_items" id="scifi_8" name="scifi"
+            style="background: url('https://internship.suvenconsultants.com/projects/365webproject/365mov/nano26.jpg'); background-size: cover;">
+            <div class="item_info">
+                <p class="name">Hulk</p>
+                <p class="title">A Marvel Comics superhero team.</p>
+            </div>
+        </div>
+        <div class="content_items" id="scifi_9" name="scifi"
+            style="background: url('https://internship.suvenconsultants.com/projects/365webproject/365mov/nano27.jpg'); background-size: cover;">
+            <div class="item_info">
+                <p class="name">Captain Marvel</p>
+                <p class="title">A Marvel Comics superhero team.</p>
+            </div>
+        </div>
+        <div class="content_items" id="scifi_10" name="scifi"
+            style="background: url('https://internship.suvenconsultants.com/projects/365webproject/365mov/nano28.jpg'); background-size: cover;">
+            <div class="item_info">
+                <p class="name">Wonder Woman</p>
+                <p class="title">A Marvel Comics superhero team.</p>
+            </div>
+        </div>
+        <div class="content_items" id="scifi_11" name="scifi"
+            style="background: url('https://internship.suvenconsultants.com/projects/365webproject/365mov/nano29.jpg'); background-size: cover;">
+            <div class="item_info">
+                <p class="name">Batwoman</p>
+                <p class="title">A Marvel Comics superhero team.</p>
+            </div>
+        </div>
+        <div class="content_items" id="scifi_12" name="scifi"
+            style="background: url('https://internship.suvenconsultants.com/projects/365webproject/365mov/nano30.jpg'); background-size: cover;">
+            <div class="item_info">
+                <p class="name">Batman</p>
+                <p class="title">A Marvel Comics superhero team.</p>
+            </div>
+        </div>
+        <div class="content_items" id="scifi_13" name="scifi"
+            style="background: url('https://internship.suvenconsultants.com/projects/365webproject/365mov/nano31.jpg'); background-size: cover;">
+            <div class="item_info">
+                <p class="name">Superman</p>
+                <p class="title">A Marvel Comics superhero team.</p>
+            </div>
+        </div>
+        <div class="content_items" id="scifi_14" name="scifi"
+            style="background: url('https://internship.suvenconsultants.com/projects/365webproject/365mov/nano32.jpg'); background-size: cover;">
+            <div class="item_info">
+                <p class="name">Superwoman</p>
+                <p class="title">A Marvel Comics superhero team.</p>
+            </div>
+        </div>
+        <div class="content_items" id="scifi_15" name="scifi"
+            style="background: url('https://internship.suvenconsultants.com/projects/365webproject/365mov/nano33.jpg'); background-size: cover;">
+            <div class="item_info">
+                <p class="name">Doctor Strange</p>
+                <p class="title">A Marvel Comics superhero team.</p>
+            </div>
+        </div>
+        <div class="content_items" id="scifi_16" name="scifi"
+            style="background: url('https://internship.suvenconsultants.com/projects/365webproject/365mov/nano34.jpg'); background-size: cover;">
+            <div class="item_info">
+                <p class="name">Mars</p>
+                <p class="title">A Marvel Comics superhero team.</p>
+            </div>
+        </div>
+        <div class="content_items" id="scifi_17" name="scifi"
+            style="background: url('https://internship.suvenconsultants.com/projects/365webproject/365mov/nano35.jpg'); background-size: cover;">
+            <div class="item_info">
+                <p class="name">Gravity</p>
+                <p class="title">A Marvel Comics superhero team.</p>
+            </div>
+        </div>
+        <div class="content_items" id="scifi_18" name="scifi"
+            style="background: url('https://internship.suvenconsultants.com/projects/365webproject/365mov/nano36.jpg'); background-size: cover;">
+            <div class="item_info">
+                <p class="name">Martian</p>
+                <p class="title">A Marvel Comics superhero team.</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <a href="Index.html"><img class="logo"
+                src="https://internship.suvenconsultants.com/projects/365webproject/365epimages/365ep.jpg"
+                alt="365"></a>
+        <p class="foot_para">Powered by 365 Entertainment Portal 2019. All Rights Reserved.</p>
+    </div>
+
+    <script src="IndexJS.js"></script>
+    <script src="MoviesJS.js"></script>
+</body>
+
+</html>
